@@ -22,11 +22,8 @@ keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tx", ":tabclose<CR>")
 keymap.set("n", "<leader>tn", ":tabn<CR>")
 keymap.set("n", "<leader>tp", ":tabp<CR>")
-
 -- comment
--- keymap.set("n", "<leader>o", "<esc><cmd>lua require('Comment.api').toggle.linewise.current()<cr>")
---
--- print(2)
+keymap.set("n", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise.current()<cr>")
 --
 -- maps.v["<leader>/"] = {
 --   "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",

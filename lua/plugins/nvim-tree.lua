@@ -30,6 +30,10 @@ return {
 					},
 				},
 			},
+			view = {
+
+				width = 50,
+			},
 		})
 	end,
 }
