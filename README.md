@@ -2,9 +2,13 @@
 
 ![Imgur](https://i.imgur.com/f4glP6z.png)
 
-## require neovim 0.9
-
 ### How to use
+
+#### requirements
+
+- neovim 0.9
+- nodejs
+- build-essential
 
 ```bash
 mv nvim nvim.backup
