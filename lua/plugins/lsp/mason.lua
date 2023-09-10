@@ -23,6 +23,7 @@ return {
 				"tsserver",
 				"html",
 				"cssls",
+				"jdtls",
 				-- "tailwindcss",
 				"lua_ls",
 				"graphql",
