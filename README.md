@@ -17,3 +17,4 @@ mv nvim nvim.backup
 ```bash
 git clone https://github.com/akinj15/nvim-dotenvs ~/.config && mv nvim-dotenvs nvim
 ```
+
