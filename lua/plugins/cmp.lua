@@ -2,8 +2,19 @@ return {
   {
     "hrsh7th/nvim-cmp",
 
-    dependencies = { "hrsh7th/cmp-emoji" },
+    dependencies = {
+      "hrsh7th/cmp-emoji",
+      { "roobert/tailwindcss-colorizer-cmp.nvim", opts = {} }
+    },
     opts = function(_, opts)
+      -- original LazyVim kind icon formatter
+      local format_kinds = opts.formatting.format
+      opts.formatting.format = function(entry, item)
+        format_kinds(entry, item) -- add icons
+        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+      end
+
+
       local has_words_before = function()
         unpack = unpack or table.unpack
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -12,6 +23,7 @@ return {
 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
+
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
